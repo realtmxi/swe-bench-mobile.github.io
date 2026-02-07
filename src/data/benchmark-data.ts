@@ -1,4 +1,4 @@
-import { Agent, EvaluationResult, BenchmarkStats, LeaderboardEntry } from './types';
+import { Agent, EvaluationResult, BenchmarkStats, LeaderboardEntry, TaskCategoryStat, TaskDifficultyStat } from './types';
 
 // Agent definitions based on paper configurations
 export const agents: Agent[] = [
@@ -207,7 +207,7 @@ export const evaluationResults: EvaluationResult[] = [
 
 // Task category statistics based on paper (Section 4.5)
 // Agents perform better on Data Management, struggle with Gesture & Interaction and Media
-export const taskCategoryStats = [
+export const taskCategoryStats: TaskCategoryStat[] = [
   { category: 'UI Components', count: 18, avgPassRate: 24.5 },
   { category: 'Gesture & Interaction', count: 8, avgPassRate: 15.2 },
   { category: 'Data Management', count: 12, avgPassRate: 32.3 },
@@ -218,7 +218,7 @@ export const taskCategoryStats = [
 
 // Task difficulty distribution based on paper (Section 4.2)
 // Performance drops sharply with complexity
-export const taskDifficultyStats = [
+export const taskDifficultyStats: TaskDifficultyStat[] = [
   { difficulty: 'Easy (1-2 files)', count: 18, avgPassRate: 18.0 },
   { difficulty: 'Medium (3-6 files)', count: 22, avgPassRate: 10.0 },
   { difficulty: 'Hard (7+ files)', count: 10, avgPassRate: 2.0 },
