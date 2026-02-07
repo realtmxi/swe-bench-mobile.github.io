@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap');
+
+:root {
+  /* Core colors */
+  --foreground: 23 23 23;
+  --background: 255 255 255;
+  --muted: 115 115 115;
+  --accent: 10 10 10;
+  --border: 229 229 229;
+  
+  /* Brand color - Rednote inspired red */
+  --brand: 255 45 85;
+  --brand-dark: 220 38 72;
+  --brand-light: 255 100 130;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: 250 250 250;
+    --background: 10 10 10;
+    --muted: 163 163 163;
+    --accent: 250 250 250;
+    --border: 38 38 38;
+    
+    --brand: 255 59 95;
+    --brand-dark: 255 45 85;
+    --brand-light: 255 120 150;
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  letter-spacing: -0.011em;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+/* Subtle animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Custom scrollbar - minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted));
+}
+
+/* Selection - brand color */
+::selection {
+  background: rgb(var(--brand) / 0.15);
+}
+
+/* Focus states */
+:focus-visible {
+  outline: 2px solid rgb(var(--brand));
+  outline-offset: 2px;
+}
+
+/* Glass effect - refined */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(10, 10, 10, 0.72);
+  }
+}
+
+/* Brand gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, rgb(var(--brand)) 0%, rgb(var(--brand-dark)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Number styling */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(var(--border)), transparent);
+}
+
+/* Brand button hover */
+.btn-brand {
+  background: rgb(var(--brand));
+  transition: all 0.2s ease;
+}
+
+.btn-brand:hover {
+  background: rgb(var(--brand-dark));
+  transform: translateY(-1px);
+}
+
+/* Progress bar with brand color */
+.progress-brand {
+  background: linear-gradient(90deg, rgb(var(--brand)), rgb(var(--brand-light)));
+}
