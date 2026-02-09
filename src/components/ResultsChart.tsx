@@ -118,7 +118,7 @@ export function CategoryPassRateChart() {
           <XAxis 
             type="number" 
             tick={{ fontSize: 11, fill: chartColors.muted }} 
-            domain={[0, 40]}
+            domain={[0, 20]}
             axisLine={{ stroke: chartColors.grid }}
             tickLine={false}
           />

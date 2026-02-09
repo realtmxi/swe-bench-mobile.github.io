@@ -3,8 +3,8 @@ import { AgentComparisonChart, TaskDifficultyChart, CategoryPassRateChart } from
 import { getLeaderboard, getBenchmarkStats, taskCategoryStats, taskDifficultyStats } from '@/data/benchmark-data';
 
 export const metadata = {
-  title: 'Leaderboard | Mobile-Bench',
-  description: 'Compare AI coding agents on Mobile-Bench benchmark tasks',
+  title: 'Leaderboard | SWE-Bench Mobile',
+  description: 'Compare AI coding agents on SWE-Bench Mobile benchmark tasks',
 };
 
 export default function LeaderboardPage() {
@@ -187,7 +187,7 @@ export default function LeaderboardPage() {
               <div>
                 <p className="text-caption font-medium mb-1">Agent Design Matters</p>
                 <p className="text-small text-muted leading-relaxed">
-                  The same model (Opus 4.5) achieves 12% on Cursor but only 4% on Codex—a 3× difference. Agent scaffolding is as important as model capability.
+                  The same model (Opus 4.5) achieves 12% on Cursor but only 2% on OpenCode—a 6x difference. Agent scaffolding is as important as model capability.
                 </p>
               </div>
               <div>

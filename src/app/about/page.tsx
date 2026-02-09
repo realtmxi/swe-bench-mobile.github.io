@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'About | Mobile-Bench',
-  description: 'Learn about Mobile-Bench, the industry-level benchmark for mobile development AI agents',
+  title: 'About | SWE-Bench Mobile',
+  description: 'Learn about SWE-Bench Mobile, the industry-level benchmark for mobile development AI agents',
 };
 
 export default function AboutPage() {
@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-headline">About Mobile-Bench</h1>
+          <h1 className="text-headline">About SWE-Bench Mobile</h1>
           <p className="mt-4 text-xl text-muted leading-relaxed">
             An industry-level benchmark for evaluating AI coding agents on real-world mobile development tasks.
           </p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 well-represented in existing benchmarks.
               </p>
               <p>
-                Mobile-Bench addresses this gap by providing a comprehensive benchmark focused on 
+                SWE-Bench Mobile addresses this gap by providing a comprehensive benchmark focused on 
                 industry-level mobile development tasks derived from real Product Requirement Documents.
               </p>
             </div>
@@ -75,16 +75,16 @@ export default function AboutPage() {
             <h2 className="text-body font-medium mb-6">Benchmark Statistics</h2>
             <div className="grid grid-cols-3 gap-6">
               <div>
-                <p className="text-3xl font-medium tabular-nums">49</p>
+                <p className="text-3xl font-medium tabular-nums">50</p>
                 <p className="mt-1 text-small text-muted">Tasks</p>
               </div>
               <div>
-                <p className="text-3xl font-medium tabular-nums">446</p>
+                <p className="text-3xl font-medium tabular-nums">449</p>
                 <p className="mt-1 text-small text-muted">Test Cases</p>
               </div>
               <div>
-                <p className="text-3xl font-medium tabular-nums">10+</p>
-                <p className="mt-1 text-small text-muted">Agents Tested</p>
+                <p className="text-3xl font-medium tabular-nums">22</p>
+                <p className="mt-1 text-small text-muted">Agent Configurations</p>
               </div>
             </div>
           </div>
@@ -93,12 +93,16 @@ export default function AboutPage() {
           <div id="citation">
             <h2 className="text-title mb-4">Citation</h2>
             <pre className="p-4 rounded-xl bg-foreground/[0.03] border border-border/30 text-small text-muted overflow-x-auto">
-{`@misc{mobilebench2025,
-  title={Mobile-Bench: Industry-Level Benchmark 
-         for Mobile Development AI Agents},
-  author={Mobile-Bench Team},
-  year={2025},
-  url={https://mobile-bench.dev}
+{`@inproceedings{swebenchmobile2026,
+  title={SWE-Bench Mobile: Can Large Language Model
+         Agents Develop Industry-Level Mobile
+         Applications?},
+  author={Xi, Minghe and others},
+  booktitle={Proceedings of the 32nd ACM SIGKDD
+             Conference on Knowledge Discovery
+             and Data Mining (KDD '26)},
+  year={2026},
+  url={https://swebenchmobile.com}
 }`}
             </pre>
           </div>

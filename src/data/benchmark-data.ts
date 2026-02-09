@@ -1,8 +1,8 @@
 import { Agent, EvaluationResult, BenchmarkStats, LeaderboardEntry } from './types';
 
-// Agent definitions based on paper configurations
+// Agent definitions based on paper configurations (22 total)
 export const agents: Agent[] = [
-  // Cursor configurations
+  // Cursor configurations (5)
   {
     id: 'cursor-opus',
     name: 'Cursor',
@@ -17,7 +17,28 @@ export const agents: Agent[] = [
     provider: 'Cursor',
     description: 'Cursor IDE Agent with Claude Sonnet 4.5 model',
   },
-  // Codex configurations
+  {
+    id: 'cursor-gpt52',
+    name: 'Cursor',
+    model: 'GPT 5.2',
+    provider: 'Cursor',
+    description: 'Cursor IDE Agent with GPT 5.2 model',
+  },
+  {
+    id: 'cursor-gemini3pro',
+    name: 'Cursor',
+    model: 'Gemini 3 Pro',
+    provider: 'Cursor',
+    description: 'Cursor IDE Agent with Gemini 3 Pro model',
+  },
+  {
+    id: 'cursor-gpt51',
+    name: 'Cursor',
+    model: 'GPT 5.1',
+    provider: 'Cursor',
+    description: 'Cursor IDE Agent with GPT 5.1 model',
+  },
+  // Codex configurations (5)
   {
     id: 'codex-glm',
     name: 'Codex',
@@ -33,13 +54,27 @@ export const agents: Agent[] = [
     description: 'OpenAI Codex CLI with Claude Sonnet 4.5 model',
   },
   {
+    id: 'codex-gpt5',
+    name: 'Codex',
+    model: 'GPT 5',
+    provider: 'OpenAI',
+    description: 'OpenAI Codex CLI with GPT 5 model',
+  },
+  {
     id: 'codex-opus',
     name: 'Codex',
     model: 'Opus 4.5',
     provider: 'OpenAI + Anthropic',
     description: 'OpenAI Codex CLI with Claude Opus 4.5 model',
   },
-  // Claude Code configurations
+  {
+    id: 'codex-gpt51',
+    name: 'Codex',
+    model: 'GPT 5.1',
+    provider: 'OpenAI',
+    description: 'OpenAI Codex CLI with GPT 5.1 model',
+  },
+  // Claude Code configurations (4)
   {
     id: 'cc-glm',
     name: 'Claude Code',
@@ -68,7 +103,7 @@ export const agents: Agent[] = [
     provider: 'Anthropic',
     description: 'Anthropic Claude Code with Haiku model',
   },
-  // OpenCode configurations
+  // OpenCode configurations (8)
   {
     id: 'opencode-glm46',
     name: 'OpenCode',
@@ -127,22 +162,21 @@ export const agents: Agent[] = [
   },
 ];
 
-// Evaluation results based on paper data (Section 4)
-// Paper reports: Best performance 12% Task Success Rate, up to 28.1% Test Pass Rate
-// 50 total tasks evaluated
+// Evaluation results based on paper Appendix Table 5 (Complete Experimental Results)
+// 50 total tasks, 449 test cases
 export const evaluationResults: EvaluationResult[] = [
-  // Cursor configurations - Best performers (12% Task Success)
+  // Cursor configurations
   {
     agentId: 'cursor-opus',
     totalPatches: 50,
     successfulPatches: 6,
     failedPatches: 44,
     taskSuccessRate: 12.0,
-    totalTestCases: 450,
+    totalTestCases: 449,
     passedTests: 126,
-    failedTests: 324,
+    failedTests: 323,
     skippedTests: 0,
-    testPassRate: 28.0,
+    testPassRate: 28.1,
     evaluationDate: '2026-01-07',
     avgCost: 3.50,
   },
@@ -152,13 +186,55 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 6,
     failedPatches: 44,
     taskSuccessRate: 12.0,
-    totalTestCases: 450,
-    passedTests: 122,
-    failedTests: 328,
+    totalTestCases: 449,
+    passedTests: 120,
+    failedTests: 329,
     skippedTests: 0,
-    testPassRate: 27.1,
+    testPassRate: 26.7,
     evaluationDate: '2026-01-07',
     avgCost: 2.00,
+  },
+  {
+    agentId: 'cursor-gpt52',
+    totalPatches: 50,
+    successfulPatches: 4,
+    failedPatches: 46,
+    taskSuccessRate: 8.0,
+    totalTestCases: 449,
+    passedTests: 123,
+    failedTests: 326,
+    skippedTests: 0,
+    testPassRate: 27.4,
+    evaluationDate: '2026-01-07',
+    avgCost: 1.80,
+  },
+  {
+    agentId: 'cursor-gemini3pro',
+    totalPatches: 50,
+    successfulPatches: 3,
+    failedPatches: 47,
+    taskSuccessRate: 6.0,
+    totalTestCases: 449,
+    passedTests: 104,
+    failedTests: 345,
+    skippedTests: 0,
+    testPassRate: 23.2,
+    evaluationDate: '2026-01-07',
+    avgCost: 1.00,
+  },
+  {
+    agentId: 'cursor-gpt51',
+    totalPatches: 50,
+    successfulPatches: 1,
+    failedPatches: 49,
+    taskSuccessRate: 2.0,
+    totalTestCases: 449,
+    passedTests: 88,
+    failedTests: 361,
+    skippedTests: 0,
+    testPassRate: 19.6,
+    evaluationDate: '2026-01-07',
+    avgCost: 1.10,
   },
   // Codex configurations
   {
@@ -167,27 +243,41 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 6,
     failedPatches: 44,
     taskSuccessRate: 12.0,
-    totalTestCases: 450,
-    passedTests: 117,
-    failedTests: 333,
+    totalTestCases: 449,
+    passedTests: 88,
+    failedTests: 361,
     skippedTests: 0,
-    testPassRate: 26.0,
+    testPassRate: 19.6,
     evaluationDate: '2026-01-07',
     avgCost: 1.30,
   },
   {
     agentId: 'codex-sonnet',
     totalPatches: 50,
-    successfulPatches: 4,
-    failedPatches: 46,
-    taskSuccessRate: 8.0,
-    totalTestCases: 450,
-    passedTests: 99,
-    failedTests: 351,
+    successfulPatches: 5,
+    failedPatches: 45,
+    taskSuccessRate: 10.0,
+    totalTestCases: 449,
+    passedTests: 126,
+    failedTests: 323,
     skippedTests: 0,
-    testPassRate: 22.0,
+    testPassRate: 28.1,
     evaluationDate: '2026-01-07',
     avgCost: 2.50,
+  },
+  {
+    agentId: 'codex-gpt5',
+    totalPatches: 50,
+    successfulPatches: 5,
+    failedPatches: 45,
+    taskSuccessRate: 10.0,
+    totalTestCases: 449,
+    passedTests: 96,
+    failedTests: 353,
+    skippedTests: 0,
+    testPassRate: 21.4,
+    evaluationDate: '2026-01-07',
+    avgCost: 1.50,
   },
   {
     agentId: 'codex-opus',
@@ -195,13 +285,27 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 2,
     failedPatches: 48,
     taskSuccessRate: 4.0,
-    totalTestCases: 450,
-    passedTests: 81,
-    failedTests: 369,
+    totalTestCases: 449,
+    passedTests: 93,
+    failedTests: 356,
     skippedTests: 0,
-    testPassRate: 18.0,
+    testPassRate: 20.7,
     evaluationDate: '2026-01-07',
-    avgCost: 4.00,
+    avgCost: 3.50,
+  },
+  {
+    agentId: 'codex-gpt51',
+    totalPatches: 50,
+    successfulPatches: 0,
+    failedPatches: 50,
+    taskSuccessRate: 0.0,
+    totalTestCases: 449,
+    passedTests: 32,
+    failedTests: 417,
+    skippedTests: 0,
+    testPassRate: 7.1,
+    evaluationDate: '2026-01-07',
+    avgCost: 1.00,
   },
   // Claude Code configurations
   {
@@ -210,9 +314,9 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 5,
     failedPatches: 45,
     taskSuccessRate: 10.0,
-    totalTestCases: 450,
+    totalTestCases: 449,
     passedTests: 120,
-    failedTests: 330,
+    failedTests: 329,
     skippedTests: 0,
     testPassRate: 26.7,
     evaluationDate: '2026-01-07',
@@ -221,28 +325,28 @@ export const evaluationResults: EvaluationResult[] = [
   {
     agentId: 'cc-sonnet',
     totalPatches: 50,
-    successfulPatches: 4,
-    failedPatches: 46,
-    taskSuccessRate: 8.0,
-    totalTestCases: 450,
-    passedTests: 108,
-    failedTests: 342,
+    successfulPatches: 5,
+    failedPatches: 45,
+    taskSuccessRate: 10.0,
+    totalTestCases: 449,
+    passedTests: 111,
+    failedTests: 338,
     skippedTests: 0,
-    testPassRate: 24.0,
+    testPassRate: 24.7,
     evaluationDate: '2026-01-07',
     avgCost: 2.00,
   },
   {
     agentId: 'cc-opus',
     totalPatches: 50,
-    successfulPatches: 3,
-    failedPatches: 47,
-    taskSuccessRate: 6.0,
-    totalTestCases: 450,
-    passedTests: 95,
-    failedTests: 355,
+    successfulPatches: 4,
+    failedPatches: 46,
+    taskSuccessRate: 8.0,
+    totalTestCases: 449,
+    passedTests: 98,
+    failedTests: 351,
     skippedTests: 0,
-    testPassRate: 21.1,
+    testPassRate: 21.8,
     evaluationDate: '2026-01-07',
     avgCost: 4.00,
   },
@@ -252,28 +356,28 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 4,
     failedPatches: 46,
     taskSuccessRate: 8.0,
-    totalTestCases: 450,
-    passedTests: 90,
-    failedTests: 360,
+    totalTestCases: 449,
+    passedTests: 82,
+    failedTests: 367,
     skippedTests: 0,
-    testPassRate: 20.0,
+    testPassRate: 18.3,
     evaluationDate: '2026-01-07',
     avgCost: 0.50,
   },
-  // OpenCode results
+  // OpenCode configurations
   {
     agentId: 'opencode-glm46',
     totalPatches: 50,
     successfulPatches: 4,
     failedPatches: 46,
     taskSuccessRate: 8.0,
-    totalTestCases: 442,
+    totalTestCases: 449,
     passedTests: 80,
-    failedTests: 362,
+    failedTests: 369,
     skippedTests: 0,
-    testPassRate: 18.1,
+    testPassRate: 17.8,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 0.13,
   },
   {
     agentId: 'opencode-gpt51',
@@ -287,7 +391,7 @@ export const evaluationResults: EvaluationResult[] = [
     skippedTests: 0,
     testPassRate: 7.1,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 0.02,
   },
   {
     agentId: 'opencode-sonnet',
@@ -301,7 +405,7 @@ export const evaluationResults: EvaluationResult[] = [
     skippedTests: 0,
     testPassRate: 14.7,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 3.50,
   },
   {
     agentId: 'opencode-glm47',
@@ -315,7 +419,7 @@ export const evaluationResults: EvaluationResult[] = [
     skippedTests: 0,
     testPassRate: 14.3,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 0.49,
   },
   {
     agentId: 'opencode-gemini3pro',
@@ -323,13 +427,13 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 2,
     failedPatches: 48,
     taskSuccessRate: 4.0,
-    totalTestCases: 445,
+    totalTestCases: 449,
     passedTests: 60,
-    failedTests: 385,
+    failedTests: 389,
     skippedTests: 0,
-    testPassRate: 13.5,
+    testPassRate: 13.4,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 0.03,
   },
   {
     agentId: 'opencode-gpt52',
@@ -337,13 +441,13 @@ export const evaluationResults: EvaluationResult[] = [
     successfulPatches: 2,
     failedPatches: 48,
     taskSuccessRate: 4.0,
-    totalTestCases: 423,
+    totalTestCases: 449,
     passedTests: 54,
-    failedTests: 369,
+    failedTests: 395,
     skippedTests: 0,
-    testPassRate: 12.8,
+    testPassRate: 12.0,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 0.04,
   },
   {
     agentId: 'opencode-opus',
@@ -357,7 +461,7 @@ export const evaluationResults: EvaluationResult[] = [
     skippedTests: 0,
     testPassRate: 12.0,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 9.33,
   },
   {
     agentId: 'opencode-gpt5',
@@ -371,27 +475,25 @@ export const evaluationResults: EvaluationResult[] = [
     skippedTests: 0,
     testPassRate: 12.0,
     evaluationDate: '2026-02-09',
-    avgCost: 0,
+    avgCost: 0.18,
   },
 ];
 
-// Task category statistics based on paper (Section 4.5)
-// Agents perform better on Data Management, struggle with Gesture & Interaction and Media
+// Task category statistics based on paper Table 8 (Section 3)
 export const taskCategoryStats = [
-  { category: 'UI Components', count: 18, avgPassRate: 24.5 },
-  { category: 'Gesture & Interaction', count: 8, avgPassRate: 15.2 },
-  { category: 'Data Management', count: 12, avgPassRate: 32.3 },
-  { category: 'Media & Assets', count: 6, avgPassRate: 18.8 },
-  { category: 'Networking', count: 4, avgPassRate: 22.2 },
-  { category: 'Other', count: 2, avgPassRate: 20.5 },
+  { category: 'UI Components', count: 18, avgPassRate: 12.5 },
+  { category: 'Data Management', count: 10, avgPassRate: 15.3 },
+  { category: 'Gesture & Interaction', count: 8, avgPassRate: 8.0 },
+  { category: 'Media & Assets', count: 7, avgPassRate: 9.8 },
+  { category: 'Networking', count: 4, avgPassRate: 11.2 },
+  { category: 'Other', count: 3, avgPassRate: 10.5 },
 ];
 
-// Task difficulty distribution based on paper (Section 4.2)
-// Performance drops sharply with complexity
+// Task difficulty distribution based on paper Table 8 (Section 3)
 export const taskDifficultyStats = [
-  { difficulty: 'Easy (1-2 files)', count: 18, avgPassRate: 18.0 },
-  { difficulty: 'Medium (3-6 files)', count: 22, avgPassRate: 10.0 },
-  { difficulty: 'Hard (7+ files)', count: 10, avgPassRate: 2.0 },
+  { difficulty: 'Easy (1-2 files)', count: 15, avgPassRate: 18.5 },
+  { difficulty: 'Medium (3-6 files)', count: 25, avgPassRate: 10.0 },
+  { difficulty: 'Hard (7+ files)', count: 10, avgPassRate: 5.8 },
 ];
 
 // Generate leaderboard from results
@@ -423,9 +525,9 @@ export function getBenchmarkStats(): BenchmarkStats {
   return {
     totalTasks: 50,
     totalAgents: agents.length,
-    totalTestCases: 450,
+    totalTestCases: 449,
     totalEvaluations: evaluationResults.length,
-    lastUpdated: '2026-01-07',
+    lastUpdated: '2026-02-09',
   };
 }
 
