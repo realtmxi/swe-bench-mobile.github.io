@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600&display=swap');
+
 :root {
   /* Core colors */
   --foreground: 23 23 23;
@@ -40,7 +42,7 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
   color: rgb(var(--foreground));
   background: rgb(var(--background));
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { getBenchmarkStats } from '@/data/benchmark-data';
 
 export const metadata = {
   title: 'About | Mobile-Bench',
@@ -7,7 +6,6 @@ export const metadata = {
 };
 
 export default function AboutPage() {
-  const stats = getBenchmarkStats();
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -77,15 +75,15 @@ export default function AboutPage() {
             <h2 className="text-body font-medium mb-6">Benchmark Statistics</h2>
             <div className="grid grid-cols-3 gap-6">
               <div>
-                <p className="text-3xl font-medium tabular-nums">{stats.totalTasks}</p>
+                <p className="text-3xl font-medium tabular-nums">49</p>
                 <p className="mt-1 text-small text-muted">Tasks</p>
               </div>
               <div>
-                <p className="text-3xl font-medium tabular-nums">{stats.totalTestCases}</p>
+                <p className="text-3xl font-medium tabular-nums">446</p>
                 <p className="mt-1 text-small text-muted">Test Cases</p>
               </div>
               <div>
-                <p className="text-3xl font-medium tabular-nums">{stats.totalAgents}+</p>
+                <p className="text-3xl font-medium tabular-nums">10+</p>
                 <p className="mt-1 text-small text-muted">Agents Tested</p>
               </div>
             </div>

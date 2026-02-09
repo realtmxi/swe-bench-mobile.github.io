@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const metadata = {
   title: 'Documentation | Mobile-Bench',
   description: 'Learn how to use Mobile-Bench to evaluate AI coding agents',
@@ -7,26 +9,32 @@ const sections = [
   {
     title: 'Getting Started',
     description: 'Quick start guide to running your first evaluation',
+    href: '/docs/getting-started',
   },
   {
     title: 'Task Format',
     description: 'Understanding PRD structure and task specifications',
+    href: '/docs/task-format',
   },
   {
     title: 'Evaluation Pipeline',
     description: 'How the automated evaluation system works',
+    href: '/docs/evaluation',
   },
   {
     title: 'Test Cases',
     description: 'Writing and understanding test validations',
+    href: '/docs/tests',
   },
   {
     title: 'API Reference',
     description: 'Programmatic access to benchmark data',
+    href: '/docs/api',
   },
   {
     title: 'CLI Usage',
     description: 'Command-line tools for running evaluations',
+    href: '/docs/cli',
   },
 ];
 
@@ -66,22 +74,23 @@ export default function DocsPage() {
         <div className="mx-auto max-w-3xl">
           <div className="grid gap-3">
             {sections.map((section) => (
-              <div
+              <Link
                 key={section.title}
-                className="flex items-center justify-between p-5 rounded-2xl border border-border/50"
+                href={section.href}
+                className="group flex items-center justify-between p-5 rounded-2xl border border-border/50 hover:border-border transition-colors"
               >
                 <div>
-                  <h3 className="text-body font-medium">
+                  <h3 className="text-body font-medium group-hover:text-foreground transition-colors">
                     {section.title}
                   </h3>
                   <p className="mt-1 text-caption text-muted">
                     {section.description}
                   </p>
                 </div>
-                <span className="text-small text-muted/60 px-2 py-0.5 rounded-full bg-foreground/[0.03] border border-border/30">
-                  Coming Soon
+                <span className="text-muted group-hover:text-foreground group-hover:translate-x-1 transition-all">
+                  →
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
