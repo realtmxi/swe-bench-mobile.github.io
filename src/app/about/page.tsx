@@ -93,7 +93,7 @@ export default function AboutPage() {
           <div id="citation">
             <h2 className="text-title mb-4">Citation</h2>
             <pre className="p-4 rounded-xl bg-foreground/[0.03] border border-border/30 text-small text-muted overflow-x-auto">
-{`@inproceedings{swebenchmobile2026,
+{`@article{swebenchmobile2026,
   title={SWE-Bench Mobile: Can Large Language Model
          Agents Develop Industry-Level Mobile
          Applications?},
@@ -102,9 +102,6 @@ export default function AboutPage() {
           and Dong, Honghua and Li, Hanchen
           and Xie, Xinni and Wang, Guangjing
           and You, Jiaxuan},
-  booktitle={Proceedings of the 32nd ACM SIGKDD
-             Conference on Knowledge Discovery
-             and Data Mining (KDD '26)},
   year={2026},
   url={https://swebenchmobile.com}
 }`}
