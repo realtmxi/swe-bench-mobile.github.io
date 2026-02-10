@@ -193,7 +193,7 @@ export default function LeaderboardPage() {
               <div>
                 <p className="text-caption font-medium mb-1">Complexity Impact</p>
                 <p className="text-small text-muted leading-relaxed">
-                  Performance drops sharply with task complexity: 18% success for 1-2 files vs. only 2% for 7+ files.
+                  Performance drops sharply with task complexity: 18.5% success for easy tasks vs. only 5.8% for hard tasks (7+ files).
                 </p>
               </div>
               <div>

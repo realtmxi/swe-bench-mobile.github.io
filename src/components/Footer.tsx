@@ -44,7 +44,7 @@ export function Footer() {
                 </li>
                 <li>
                   <a 
-                    href="https://github.com/realtmxi/mobile-bench" 
+                    href="https://github.com/realtmxi/swe-bench-mobile" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-small text-muted hover:text-foreground transition-colors"
@@ -53,7 +53,7 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-small text-muted hover:text-foreground transition-colors">
+                  <a href="/about#citation" className="text-small text-muted hover:text-foreground transition-colors">
                     Paper
                   </a>
                 </li>

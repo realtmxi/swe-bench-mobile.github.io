@@ -26,7 +26,7 @@ export default function DocsPage() {
             </p>
             <div className="p-4 rounded-xl bg-background/10 font-mono text-small overflow-x-auto">
               <p className="text-background/50"># Clone the repository</p>
-              <p>git clone https://github.com/realtmxi/mobile-bench.git</p>
+              <p>git clone https://github.com/realtmxi/swe-bench-mobile.git</p>
               <p className="mt-3 text-background/50"># Run evaluation on a single task</p>
               <p>./run_evaluation.sh --agent codex --task 1</p>
             </div>

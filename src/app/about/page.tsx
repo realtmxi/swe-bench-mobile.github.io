@@ -97,7 +97,11 @@ export default function AboutPage() {
   title={SWE-Bench Mobile: Can Large Language Model
          Agents Develop Industry-Level Mobile
          Applications?},
-  author={Xi, Minghe and others},
+  author={Tian, Muxin and Wang, Zhe and Yang, Blair
+          and Tang, Zhenwei and Zhu, Kunlun
+          and Dong, Honghua and Li, Hanchen
+          and Xie, Xinni and Wang, Guangjing
+          and You, Jiaxuan},
   booktitle={Proceedings of the 32nd ACM SIGKDD
              Conference on Knowledge Discovery
              and Data Mining (KDD '26)},
@@ -116,7 +120,7 @@ export default function AboutPage() {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/realtmxi/mobile-bench"
+                href="https://github.com/realtmxi/swe-bench-mobile"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 text-[15px] font-medium bg-foreground text-background rounded-full hover:opacity-80 transition-opacity"

@@ -54,12 +54,12 @@ export default function HomePage() {
               <p className="mt-2 text-caption text-muted">Test Cases</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-medium tabular-nums">{stats.totalAgents}</p>
+              <p className="text-4xl md:text-5xl font-medium tabular-nums">4</p>
               <p className="mt-2 text-caption text-muted">Agents</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-medium tabular-nums">{stats.totalEvaluations}</p>
-              <p className="mt-2 text-caption text-muted">Evaluations</p>
+              <p className="text-4xl md:text-5xl font-medium tabular-nums">9</p>
+              <p className="mt-2 text-caption text-muted">Models</p>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
                 <div className="mt-4 h-1 bg-border/50 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-brand/30 rounded-full transition-all duration-500 group-hover:bg-brand/50"
-                    style={{ width: `${cat.avgPassRate * 5}%` }}
+                    style={{ width: `${Math.min(cat.avgPassRate / 20 * 100, 100)}%` }}
                   />
                 </div>
               </div>
@@ -194,7 +194,7 @@ export default function HomePage() {
               Learn More
             </Link>
             <a
-              href="https://github.com/realtmxi/mobile-bench"
+              href="https://github.com/realtmxi/swe-bench-mobile"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 text-[15px] text-white/80 hover:text-white transition-colors"

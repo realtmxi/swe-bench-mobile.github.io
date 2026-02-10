@@ -39,8 +39,8 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
 export function AgentComparisonChart() {
   const leaderboard = getLeaderboard();
   
-  const data = leaderboard.slice(0, 6).map((entry) => ({
-    name: entry.agent.model,
+  const data = leaderboard.slice(0, 8).map((entry) => ({
+    name: `${entry.agent.name} (${entry.agent.model})`,
     'Task Success': entry.result.taskSuccessRate,
     'Test Pass': entry.result.testPassRate,
   }));
