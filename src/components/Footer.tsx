@@ -64,7 +64,7 @@ export function Footer() {
 
         <div className="mt-12 pt-6 border-t border-border/50">
           <p className="text-small text-muted">
-            © {new Date().getFullYear()} Mobile-Bench
+            © {new Date().getFullYear()} SWE-BENCH MOBILE
           </p>
         </div>
       </div>

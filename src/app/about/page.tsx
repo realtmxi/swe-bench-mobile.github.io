@@ -11,7 +11,7 @@ export default function AboutPage() {
       {/* Header */}
       <section className="pt-32 pb-16 px-6">
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-headline">About SWE-Bench Mobile</h1>
+          <h1 className="text-headline">About SWE-BENCH MOBILE</h1>
           <p className="mt-4 text-xl text-muted leading-relaxed">
             An industry-level benchmark for evaluating AI coding agents on real-world mobile development tasks.
           </p>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                 GitHub
               </a>
               <a
-                href="mailto:contact@mobile-bench.dev"
+                href="mailto:murphy.tian@mail.utoronto.ca"
                 className="px-5 py-2.5 text-[15px] text-muted hover:text-foreground transition-colors"
               >
                 Email →

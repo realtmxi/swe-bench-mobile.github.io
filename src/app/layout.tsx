@@ -4,12 +4,12 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Mobile-Bench | Industry-Level Benchmark for Mobile Development AI Agents',
-  description: 'Evaluate and compare AI coding agents on real-world mobile development tasks. Similar to SWE-bench but focused on industry-level mobile app development.',
-  keywords: ['benchmark', 'mobile development', 'AI agents', 'coding assistant', 'iOS', 'Android', 'SWE-bench'],
-  authors: [{ name: 'Mobile-Bench Team' }],
+  title: 'SWE-Bench Mobile | Industry-Level Benchmark for Mobile Development AI Agents',
+  description: 'Evaluate and compare AI coding agents on real-world mobile development tasks from an industry-level iOS codebase.',
+  keywords: ['benchmark', 'mobile development', 'AI agents', 'coding assistant', 'iOS', 'Android', 'SWE-bench', 'SWE-Bench Mobile'],
+  authors: [{ name: 'SWE-Bench Mobile Team' }],
   openGraph: {
-    title: 'Mobile-Bench',
+    title: 'SWE-Bench Mobile',
     description: 'Industry-Level Benchmark for Mobile Development AI Agents',
     type: 'website',
   },

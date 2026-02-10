@@ -79,7 +79,7 @@ export function Logo({ className, size = 'md', showText = true }: LogoProps) {
 
       {showText && (
         <span className={cn('font-medium tracking-tight', sizes[size].text)}>
-          Mobile-Bench
+          SWE-BENCH MOBILE
         </span>
       )}
     </div>
@@ -174,7 +174,7 @@ export function LogoChart({ className, size = 'md', showText = true }: LogoProps
 
       {showText && (
         <span className={cn('font-medium tracking-tight', sizes[size].text)}>
-          Mobile-Bench
+          SWE-BENCH MOBILE
         </span>
       )}
     </div>

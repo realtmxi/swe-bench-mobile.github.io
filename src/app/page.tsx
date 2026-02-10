@@ -16,11 +16,11 @@ export default function HomePage() {
               Industry-Level Benchmark
             </p>
             <h1 className="text-display text-foreground animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              Mobile-Bench
+              SWE-BENCH MOBILE
             </h1>
             <p className="mt-6 text-xl text-muted leading-relaxed max-w-xl animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              Evaluating AI coding agents on real-world mobile development tasks. 
-              Like SWE-bench, for iOS and Android.
+              Evaluating AI coding agents on real-world mobile development tasks
+              from an industry-level iOS codebase.
             </p>
             
             <div className="mt-10 flex items-center gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -182,7 +182,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="py-20 px-6 bg-brand">
         <div className="mx-auto max-w-6xl text-center">
-          <h2 className="text-headline text-white">Interested in Mobile-Bench?</h2>
+          <h2 className="text-headline text-white">Interested in SWE-Bench Mobile?</h2>
           <p className="mt-4 text-body text-white/70 max-w-lg mx-auto">
             Contact us for research collaboration or to discuss evaluating your AI coding agent.
           </p>
