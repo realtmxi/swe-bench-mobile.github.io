@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { LeaderboardEntry } from '@/data/types';
+import { AgentIcon } from './AgentIcon';
 
 // Agent brand colors for visual distinction
 const AGENT_COLORS: Record<string, { bg: string; text: string; border: string }> = {
@@ -126,11 +127,12 @@ export function LeaderboardTable({ entries, compact = false }: LeaderboardTableP
                 </td>
                 <td className="px-5 py-4">
                   <span className={cn(
-                    'inline-flex items-center px-2.5 py-1 rounded-full text-small font-medium border',
+                    'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-small font-medium border',
                     agentColor.bg,
                     agentColor.text,
                     agentColor.border,
                   )}>
+                    <AgentIcon name={entry.agent.name} className="w-3.5 h-3.5" />
                     {entry.agent.name}
                   </span>
                 </td>
