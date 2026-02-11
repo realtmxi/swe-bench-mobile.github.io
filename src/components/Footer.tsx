@@ -53,7 +53,7 @@ export function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="/about#citation" className="text-small text-muted hover:text-foreground transition-colors">
+                  <a href="https://arxiv.org/abs/2602.09540" className="text-small text-muted hover:text-foreground transition-colors">
                     Paper
                   </a>
                 </li>

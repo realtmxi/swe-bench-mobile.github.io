@@ -93,17 +93,14 @@ export default function AboutPage() {
           <div id="citation">
             <h2 className="text-title mb-4">Citation</h2>
             <pre className="p-4 rounded-xl bg-foreground/[0.03] border border-border/30 text-small text-muted overflow-x-auto">
-{`@article{swebenchmobile2026,
-  title={SWE-Bench Mobile: Can Large Language Model
-         Agents Develop Industry-Level Mobile
-         Applications?},
-  author={Tian, Muxin and Wang, Zhe and Yang, Blair
-          and Tang, Zhenwei and Zhu, Kunlun
-          and Dong, Honghua and Li, Hanchen
-          and Xie, Xinni and Wang, Guangjing
-          and You, Jiaxuan},
+{`@misc{tian2026swebenchmobilelargelanguage,
+  title={SWE-Bench Mobile: Can Large Language Model Agents Develop Industry-Level Mobile Applications?},
+  author={Muxin Tian and Zhe Wang and Blair Yang and Zhenwei Tang and Kunlun Zhu and Honghua Dong and Hanchen Li and Xinni Xie and Guangjing Wang and Jiaxuan You},
   year={2026},
-  url={https://swebenchmobile.com}
+  eprint={2602.09540},
+  archivePrefix={arXiv},
+  primaryClass={cs.SE},
+  url={https://arxiv.org/abs/2602.09540},
 }`}
             </pre>
           </div>

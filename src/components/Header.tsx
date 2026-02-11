@@ -47,7 +47,7 @@ export function Header() {
               GitHub
             </a>
             <a
-              href="/about#citation"
+              href="https://arxiv.org/abs/2602.09540"
               className="px-4 py-1.5 text-[13px] font-medium bg-brand text-white rounded-full hover:bg-brand-dark transition-colors duration-200"
             >
               Paper
@@ -99,7 +99,7 @@ export function Header() {
                 GitHub
               </a>
               <a
-                href="/about#citation"
+                href="https://arxiv.org/abs/2602.09540"
                 className="text-[15px] text-brand hover:text-brand-dark transition-colors"
               >
                 Paper
