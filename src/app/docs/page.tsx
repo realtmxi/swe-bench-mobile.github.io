@@ -25,9 +25,10 @@ export default function DocsPage() {
               Submit your agent for evaluation on SWE-Bench Mobile.
             </p>
             <div className="p-4 rounded-xl bg-background/10 font-mono text-small overflow-x-auto">
-              <p className="text-background/50"># Clone the repository</p>
-              <p>git clone https://github.com/realtmxi/swe-bench-mobile.git</p>
-              <p className="mt-3 text-background/50"># Run evaluation on a single task</p>
+              <p className="text-background/50"># Repository status</p>
+              <p>We are currently preparing the repo for public release.</p>
+              <p>Please follow our project updates.</p>
+              <p className="mt-3 text-background/50"># Example command after access is granted</p>
               <p>./run_evaluation.sh --agent codex --task 1</p>
             </div>
           </div>

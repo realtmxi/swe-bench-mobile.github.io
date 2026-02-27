@@ -186,21 +186,17 @@ export default function HomePage() {
           <p className="mt-4 text-body text-white/70 max-w-lg mx-auto">
             Contact us for research collaboration or to discuss evaluating your AI coding agent.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-4">
+          <div className="mt-8 flex flex-col items-center gap-3">
             <Link
               href="/about"
               className="px-5 py-2.5 text-[15px] font-medium bg-white text-brand rounded-full hover:bg-white/90 transition-colors"
             >
               Learn More
             </Link>
-            <a
-              href="https://github.com/realtmxi/swe-bench-mobile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 text-[15px] text-white/80 hover:text-white transition-colors"
-            >
-              GitHub →
-            </a>
+            <p className="text-small text-white/80 text-center leading-relaxed">
+              We are currently preparing the repo for public release.
+              <span className="block">Please follow our project updates.</span>
+            </p>
           </div>
         </div>
       </section>

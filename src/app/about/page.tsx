@@ -112,15 +112,11 @@ export default function AboutPage() {
               Interested in research collaboration or evaluating your AI coding agent? 
               We&apos;d love to hear from you.
             </p>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://github.com/realtmxi/swe-bench-mobile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2.5 text-[15px] font-medium bg-foreground text-background rounded-full hover:opacity-80 transition-opacity"
-              >
-                GitHub
-              </a>
+            <div className="space-y-4">
+              <p className="text-caption text-muted leading-relaxed">
+                We are currently preparing the repo for public release.
+                <span className="block">Please follow our project updates.</span>
+              </p>
               <a
                 href="mailto:murphy.tian@mail.utoronto.ca"
                 className="px-5 py-2.5 text-[15px] text-muted hover:text-foreground transition-colors"

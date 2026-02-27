@@ -39,14 +39,6 @@ export function Header() {
           {/* Right side */}
           <div className="hidden md:flex md:items-center md:gap-3">
             <a
-              href="https://github.com/realtmxi/swe-bench-mobile"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3.5 py-2 text-[13px] text-muted hover:text-foreground transition-colors duration-200"
-            >
-              GitHub
-            </a>
-            <a
               href="https://arxiv.org/abs/2602.09540"
               className="px-4 py-1.5 text-[13px] font-medium bg-brand text-white rounded-full hover:bg-brand-dark transition-colors duration-200"
             >
@@ -89,15 +81,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-3 flex items-center gap-4">
-              <a
-                href="https://github.com/realtmxi/swe-bench-mobile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[15px] text-muted hover:text-foreground transition-colors"
-              >
-                GitHub
-              </a>
+            <div className="pt-3">
               <a
                 href="https://arxiv.org/abs/2602.09540"
                 className="text-[15px] text-brand hover:text-brand-dark transition-colors"

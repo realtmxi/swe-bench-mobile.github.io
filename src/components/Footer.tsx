@@ -43,14 +43,10 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a 
-                    href="https://github.com/realtmxi/swe-bench-mobile" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-small text-muted hover:text-foreground transition-colors"
-                  >
-                    GitHub
-                  </a>
+                  <p className="text-small text-muted leading-relaxed">
+                    We are currently preparing the repo for public release.
+                    <span className="block">Please follow our project updates.</span>
+                  </p>
                 </li>
                 <li>
                   <a href="https://arxiv.org/abs/2602.09540" className="text-small text-muted hover:text-foreground transition-colors">
